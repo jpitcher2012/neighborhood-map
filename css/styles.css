@@ -1,0 +1,189 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, sans-serif;
+}
+
+h1 {
+  color: #F2F3F4;
+  font-size: 150%;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 120%;
+}
+
+p {
+  margin: 0px;
+  font-size: 100%;
+}
+
+#header {
+  box-sizing: border-box;
+  position: relative;
+  height: 50px;
+  width: 100%;
+  color: #C2C3C4;
+  background-color: #101D40;
+}
+
+#title {
+  box-sizing: border-box;
+  float: left;
+  text-align: left;
+  padding-top: 13px;
+}
+
+#filter {
+  box-sizing: border-box;
+  position: absolute;
+  float: left;
+  text-align: right;
+  right: 10px;
+  bottom: 10px;
+}
+
+#filterText {
+  max-width: 25%;
+}
+
+#hamburger {
+  box-sizing: border-box;
+  text-align: right;
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+#hamburger a {
+  text-decoration: none;
+  color: #F2F3F4;
+}
+
+#left-sidebar {
+  box-sizing: border-box;
+  position: relative;
+  float: left;
+  height: 100%;
+  color: #C2C3C4;
+  background-color: #101D40;
+  text-align: left;
+  padding: 10px;
+  z-index: 1;
+}
+
+#sidebar-content a {
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #B2B3B4;
+  text-decoration: none;
+  font-size: 75%;
+}
+
+#sidebar-content a:hover {
+  background-color: #3576D4;
+}
+
+#attribution {
+  box-sizing: border-box;
+  position: absolute;
+  width: 90%;
+  bottom: 10px;
+  text-align: right;
+  font-size: 60%;
+}
+
+#map {
+  height: calc(100% - 50px);
+}
+
+.reviews {
+  padding-left: 10px;
+  padding-right: 0px;
+}
+
+.reviews li {
+  font-style: italic;
+  margin: 5px;
+}
+
+@media print, screen and (max-width: 650px) {
+  #header {
+    height: 75px;
+  }
+  #hamburger {
+    margin-bottom: 35px;
+  }
+  #map {
+    height: calc(100% - 75px);
+  }
+}
+
+@media print, screen and (max-width: 450px) {
+  h1 {
+    font-size: 125%;
+  }
+  #title {
+    padding-top: 15px;
+  }
+  #filterText {
+    font-size: 70%;
+  }
+  #filter button {
+    font-size: 70%;
+  }
+  #sidebar-content {
+    display: none;
+  }
+}
+
+@media print, screen and (max-width: 400px) {
+  h1 {
+    font-size: 100%;
+  }
+  #filterText {
+    font-size: 50%;
+  }
+  #filter button {
+    font-size: 50%;
+  }
+  #header {
+    height: 65px;
+  }
+  #title {
+    padding-top: 17px;
+  }
+  #hamburger {
+    font-size: 20px;
+    margin-bottom: 25px;
+  }
+  #sidebar-content a {
+    font-size: 60%;
+  }
+  #attribution {
+    font-size: 50%;
+  }
+  #map {
+    height: calc(100% - 65px);
+  }
+}
+
+@media print, screen and (max-width: 319px) {
+  #title {
+    display: none;
+  }
+  #header {
+    height: 35px;
+  }
+  #hamburger {
+    font-size: 18px;
+    margin-top: -5px;
+    margin-bottom: 0px;
+  }
+  #map {
+    height: calc(100% - 35px);
+  }
+}
