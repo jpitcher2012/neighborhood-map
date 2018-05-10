@@ -125,17 +125,31 @@ function getInfo(marker, infowindow) {
         for (let i=0; i<count; i++) {
           innerHTML += '<li>' + venue.tips.groups[0].items[i].text + '</li>';
         }
-        innerHTML += '</ul>'
+        innerHTML += '</ul>';
       }
       innerHTML += '</div>';
 
-      infowindow.setContent(innerHTML)
+      infowindow.setContent(innerHTML);
     },
     error: function() {
       handleError();
     }
   });
 }
+
+// Update the map when the screen resizes
+$(window).resize(function() {
+
+  // If a location is selected, re-center it on the map and refresh the info window
+  if (vm.selectedLocation()) {
+    vm.map.setCenter(vm.selectedLocation().marker.position);
+    vm.largeInfoWindow.setContent(vm.largeInfoWindow.getContent());
+  }
+  // Otherwise, fit the map to the bounds of the locations
+  else {
+    vm.map.fitBounds(vm.bounds);
+  }
+});
 
 // Alert the user if an error occurred
 function handleError() {
