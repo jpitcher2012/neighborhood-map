@@ -1,3 +1,5 @@
+/* global $, google, ko, locations */
+
 let Location = function(data) {
   this.title = ko.observable(data.title);
   this.position = ko.observable(data.position);
